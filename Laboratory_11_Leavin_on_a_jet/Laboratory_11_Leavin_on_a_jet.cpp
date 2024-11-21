@@ -40,7 +40,12 @@ int main() {
 	return 0;
 }
 
-int findRowIndex(int thisRow);
+int findRowIndex(int thisRow) {
+	if (thisRow >= 1 && thisRow <= COLUMNS) {
+		return thisRow - 1;
+	}
+	return ERROR;
+}
 int findSeatIndex(char thisSeat) {
 	if (thisSeat == 'D') return 0;
 	if (thisSeat == 'C') return 1;
